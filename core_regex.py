@@ -10,8 +10,8 @@ def main():
 def main_regex():
     #item 6
     print("Let's play with regex")
-    regex_1_1()		#strings
-    regex_1_2()		#special_chars
+    #regex_1_1()		#strings
+    #regex_1_2()		#special_chars
     regex_2_0()		#refactoring flow
 
 
@@ -265,7 +265,8 @@ def regex_2():
 
 
 def regex_2_0():
-    pass
+    #item 204
+    regex_2_refactoring()
 
 
 def regex_2_refactoring():
