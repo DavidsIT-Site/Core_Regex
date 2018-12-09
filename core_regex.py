@@ -308,11 +308,12 @@ def regex_2___1():
     MetaCharacters (Need to be escaped):
     . ^ $ * + ? { } [ ] \ | ( )
     
-    DavidsIT.Site
+    https://www.DavidsIT.Site
+    https://www.example.com
     
     Spam@DavidsIT.Site
     Test@Example.com
-    Email@co.uk
+    Email@example.co.uk
     
     404-576-3096
     123.777.1234
@@ -329,6 +330,12 @@ def regex_2___1():
     Fights for
     Individualism
     MYOBs: MyObligation is to tell you to Mind Your own business
+    
+    Mr. Ocasio-Cortez
+    Mr. Comney
+    Mrs. Clinton
+    Mr Clinton
+    Mrs Trial
     
     ''')
     #item 218
@@ -350,7 +357,12 @@ def regex_2___1():
     pattern_list.append(r'\d{3}.\d{3}.\d{4}')
     pattern_list.append(r'[4]\d{2}.\d{3}.\d{4}')
     pattern_list.append(r'[89]\d{2}.\d{3}.\d{4}')
-    pattern_list.append(r'(\d{1,3}\.){3}\d{1,3}')
+    pattern_list.append(r'\d{1,3}\.{3}\d{1,3}')
+    
+    pattern_list.append(r'Mr\.')
+    pattern_list.append(r'Mr\.?')
+    pattern_list.append(r'Mr\.\s[A-Z]')
+    pattern_list.append(r'Mr.*\s[A-Z]')
     for pattern in pattern_list:
         #item 242
         regex_2___1_print(strings_list,pattern)
@@ -358,14 +370,14 @@ def regex_2___1():
 
 def regex_2___1_print(strings_list, pattern):
     #item 241
-    print("\n"+pattern)
+    print("\nRegex: "+pattern)
     pattern = re.compile(pattern)
     for element in strings_list:
         #item 238
         matches = pattern.finditer(element)
         for match in matches:
             #item 235
-            print(match)
+            print("%s " % match.group(0) )
 
 
 def regex_2_refactoring():
