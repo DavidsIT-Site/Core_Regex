@@ -310,6 +310,10 @@ def regex_2___1():
     
     DavidsIT.Site
     
+    Spam@DavidsIT.Site
+    Test@Example.com
+    Email@co.uk
+    
     404-576-3096
     123.777.1234
     123*777*1234
@@ -333,16 +337,20 @@ def regex_2___1():
     #item 217
     pattern_list.append(r'abc')
     pattern_list.append(r'ABC')
-    
     #pattern_list.append(r'.')  # lots of printout
-    
     pattern_list.append(r'xyz')
     pattern_list.append(r'\bxyz')
     pattern_list.append(r'\Bxyz')
-    
     pattern_list.append(r'grind')
     pattern_list.append(r'^grind')
     pattern_list.append(r'grind$')
+    pattern_list.append(r'(\d\d\d).(\d\d\d).(\d\d\d\d)')
+    pattern_list.append(r'(\d\d\d)[*](\d\d\d)[*](\d\d\d\d)')
+    pattern_list.append(r'(\d\d\d)[*-](\d\d\d)[*-](\d\d\d\d)')
+    pattern_list.append(r'\d{3}.\d{3}.\d{4}')
+    pattern_list.append(r'[4]\d{2}.\d{3}.\d{4}')
+    pattern_list.append(r'[89]\d{2}.\d{3}.\d{4}')
+    pattern_list.append(r'(\d{1,3}\.){3}\d{1,3}')
     for pattern in pattern_list:
         #item 242
         regex_2___1_print(strings_list,pattern)
